@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/bootstrap.min.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+
+    {% seo %}
+  </head>
+
+  <body>
+
+    {%include header.html%}
+
+    <div class="container">
+      {% for post in paginator.posts %}
+        {%if post.type != "image"%}
+          {%include preview.html%}
+        {% else %}
+          {%include image_preview.html%}
+        {%endif%}
+      {%endfor%}
+
+    </div>
+
+  </body>
+</html>

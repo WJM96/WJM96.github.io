@@ -1,0 +1,59 @@
+---
+---
+@import "minima";
+@import "minima/syntax-highlighting";
+
+@import url('https://fonts.googleapis.com/css?family=Exo|Roboto|Alfa+Slab+One');
+
+
+*{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Exo', sans-serif;
+  font-weight: bolder;
+  font-variant: small-caps;
+
+  margin: 0;
+}
+
+h1{
+  font-size: 48pt;
+}
+
+table{
+  height: 100%;
+}
+
+table, tbody, td, table td{
+  border:none;
+  color: inherit;
+}
+
+a{
+  color: black !important;
+  text-decoration: none !important;
+
+  &:link, &:visited, &:active{
+  }
+
+  &:hover{
+    opacity: .5;
+  }
+
+}
+
+
+.title{
+  font-weight: 900;
+  font-size: 64pt;
+
+  margin: 1rem;
+}
+
+.small_text{
+  font-size: 10pt;
+}
