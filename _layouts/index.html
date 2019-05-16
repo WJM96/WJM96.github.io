@@ -5,8 +5,41 @@
 
   <body>
 
-    {%include header.html%}
 
+    <div class="container-fluid">
+      <div class="row text-white">
+        <div class="col  hero">
+          <div class="title">
+            <h1 class="">Wes</h1>
+            <h1 class="">McClintock</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col padding-0">
+          {%include nav.html%}
+        </div>
+      </div>
+      <div class="row about">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li>Javascript</li>
+                <li>PHP</li>
+                <li>HTML/CSS</li>
+                <li>C#</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              b
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
     <div class="container">
       {% for post in paginator.posts %}
         {%if post.type != "image"%}
@@ -16,9 +49,6 @@
         {%endif%}
       {%endfor%}
 
-    </div>
-
-    {%include footer.html%}
-
+    </div> -->
   </body>
 </html>

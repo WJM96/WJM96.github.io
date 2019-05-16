@@ -3,80 +3,88 @@
 @import "minima";
 @import "minima/syntax-highlighting";
 
-@import url('https://fonts.googleapis.com/css?family=Exo|Roboto|Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Raleway');
 
 
+$teal: #3A9C8E;
+
+@mixin forMobile($break: 500px) {
+    @media screen and (max-width: $break) {
+      @content
+    }
+}
 
 html, body{
   height: 100%;
-  /* Background pattern from Toptal Subtle Patterns */
-  //background-image: url("/assets/imgs/extra_clean_paper_@2X.png");
+  font-family: "Raleway", sans-serif;
 }
 
-*{
-  font-family: 'Roboto', sans-serif;
-  font-size: 14pt
+h1, h2, h3, h4, h5, h6 {
+  font-family: Cabin, sans-serif;
+  font-weight: bold;
 }
 
-
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Exo', sans-serif;
-  font-weight: bolder;
-  font-variant: small-caps;
-
-  margin: 0;
-}
-
-h1{
-  font-size: 48pt;
-}
-
-table{
-  height: 100%;
-}
-
-table, tbody, td, table td{
-  border:none;
+a:link, a:hover, a:visited{
   color: inherit;
-}
-
-a{
-  color: black !important;
-  text-decoration: none !important;
-
-  &:link, &:visited, &:active{
-  }
-
-  &:hover{
-    color: rgba(0, 0, 0, .5) !important;
-  }
-
-}
-
-
-.title{
-  font-weight: 900;
-  font-size: 64pt;
-
-  margin: 1rem;
-}
-
-.small_text{
-  font-size: 10pt;
+  text-decoration: none;
 }
 
 header{
-  box-shadow: 1px 0px 3px black;
+  background-color: $teal;
+  font-weight: bold;
+  color: white;
+  transition: 0.5s;
+  position: relative;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
 
-  border-bottom: 1px solid black;
-  margin-bottom: 1rem;
+  a{
+    transition: 0.5s
+  }
+  a:hover{
+    background-color: white;
+    color: $teal;
+  }
 }
 
-.content{
-
-  margin-bottom: 1rem;
+.navigation{
+  a{
+    flex-grow: 1;
+    text-align: center;
+    padding: 1rem;
+  }
 }
 
-.post{
-  text-align: justify;
+
+.padding-0{
+  padding: 0;
+}
+
+.hero{
+  background-color: $teal;;
+  height: 100VH;
+  font-weight: bold;
+
+  padding: 2rem;
+  @include forMobile {
+    padding: 1rem;
+  };
+
+  .title{
+    position: absolute;
+    bottom: 0;
+    h1{
+      font-size: 80pt;
+      @include forMobile {
+        font-size: 48pt;
+      };
+    }
+  }
+}
+
+.about{
+  height: 100vh;
 }
